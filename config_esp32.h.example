@@ -1,0 +1,39 @@
+// ============================================================
+// config_esp32.h.example
+// Copier ce fichier en "config_esp32.h" et renseigner vos valeurs.
+// config_esp32.h est ignoré par git (voir .gitignore) :
+// vos identifiants ne seront jamais publiés.
+// ============================================================
+
+#ifndef CONFIG_ESP32_H
+#define CONFIG_ESP32_H
+
+// --- WiFi ---
+#define WIFI_SSID       "VOTRE_SSID"
+#define WIFI_PASSWORD   "VOTRE_MOT_DE_PASSE"
+
+// --- MQTT ---
+#define MQTT_BROKER     "192.168.1.X"     // IP du Raspberry Pi (broker Mosquitto)
+#define MQTT_PORT       1883
+#define MQTT_USER       ""                // laisser vide si pas d'authentification
+#define MQTT_PASSWORD   ""
+
+// --- Identité de l'appareil ---
+#define DEVICE_ID       "station-esp32-01"
+
+// --- Topics ---
+#define TOPIC_MESURES   "station/mesures"
+#define TOPIC_STATUT    "station/statut"
+#define TOPIC_COMMANDE  "station/commande"
+
+// --- Pins (à adapter selon votre câblage) ---
+#define PIN_DHT         4    // Data du DHT11
+#define PIN_RELAIS      26
+#define PIN_LED_STAT    2
+
+// --- Seuils & timing ---
+#define SEUIL_TEMP_ALERTE   30.0   // °C
+#define INTERVALLE_MESURE   30000  // ms
+#define INTERVALLE_STATUT   60000  // ms
+
+#endif
