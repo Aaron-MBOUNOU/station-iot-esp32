@@ -1,0 +1,7 @@
+config_esp32.h
+build/
+.pio/
+*.bin
+*.elf
+.vscode/
+.DS_Store
